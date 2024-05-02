@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/Black"/>
+            <corners android:radius="20dp"/>
+        </shape>
+    </item>
+    <!-- Image drawable with 80% opacity -->
+    <item>
+        <bitmap android:src="@drawable/back_3"
+            android:gravity="fill"
+            android:alpha="0.5"/> <!-- 50% opacity -->
+    </item>
+</layer-list>

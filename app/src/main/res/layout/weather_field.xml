@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- MPD XML Starter code - main diet 2023-2024 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/imageViewTop"
+        android:layout_width="match_parent"
+        android:layout_height="370dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/back_3"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/imageViewBottom"
+        android:layout_width="match_parent"
+        android:layout_height="398dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="2dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/back_1"
+        tools:ignore="ContentDescription" />
+
+
+    <ImageView
+        android:id="@+id/imageViewCentre"
+        android:layout_width="match_parent"
+        android:layout_height="586dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="-6dp"
+        android:layout_marginBottom="-2dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/back_4"
+        tools:ignore="ContentDescription" />
+
+
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/back"
+        android:layout_marginTop="25dp"/>
+
+
+    <TextView
+        android:id="@+id/citytextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="34dp"
+        android:text="@string/london"
+        android:textColor="@color/White"
+        android:textSize="40sp"
+        tools:ignore="RelativeOverlap" />
+
+
+    <TextView
+        android:id="@+id/temperatureTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="100dp"
+        android:text="@string/_21_c"
+        android:textColor="@color/White"
+        android:textSize="80sp"
+        tools:ignore="RelativeOverlap" />
+
+
+
+    <TextView
+        android:id="@+id/windSpeedTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="190dp"
+        android:layout_marginEnd="0dp"
+        android:text="@string/_13mph"
+        android:textColor="@color/White"
+        android:textSize="30sp"
+        tools:ignore="RelativeOverlap" />
+
+    <ImageView
+        android:id="@+id/windSpeed"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="193dp"
+        android:layout_marginEnd="260dp"
+        android:src="@drawable/wind_speed"
+        tools:ignore="ContentDescription" />
+
+    <!-- Dynamically add forecast items here -->
+
+
+    <TextView
+        android:id="@+id/humidityTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="248dp"
+        android:layout_marginEnd="0dp"
+        android:text="@string/_0"
+        android:textColor="@color/White"
+        android:textSize="30sp"
+        tools:ignore="RelativeOverlap" />
+
+    <TextView
+        android:id="@+id/pressureTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="303dp"
+        android:layout_marginEnd="0dp"
+        android:text="@string/_12"
+        android:textColor="@color/White"
+        android:textSize="30sp"
+        tools:ignore="RelativeOverlap" />
+
+    <ImageView
+        android:id="@+id/precipitation"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="250dp"
+        android:layout_marginEnd="190dp"
+        android:src="@drawable/precipitation"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/pubDateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="74dp"
+        android:layout_marginTop="349dp"
+        android:text="@string/sunday_25_february_10_00pm"
+        android:textColor="@color/GoldenYellow"
+        android:textSize="20sp"
+        tools:ignore="RelativeOverlap" />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pubDateTextView"
+        tools:ignore="ScrollViewCount">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="0dp">
+
+            <TextView
+                android:id="@+id/dailyforecast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/today"
+                android:textAlignment="center"
+                android:textColor="@color/White"
+                android:textSize="25sp"
+                android:layout_marginHorizontal="50dp"/>
+
+
+            <TextView
+                android:id="@+id/futureforecast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_3_day_forecast"
+                android:textAlignment="center"
+                android:textColor="@color/White"
+                android:textSize="25sp"
+                android:layout_marginHorizontal="20dp"/>
+
+            <ImageView
+                android:id="@+id/nextButton"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/next"
+                android:layout_marginTop="8dp"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ok"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/visibilityTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="430dp"
+            android:layout_weight="1"
+            android:background="@drawable/background2"
+            android:text="@string/visibility"
+            android:textAlignment="center"
+            android:textColor="@color/GoldenYellow"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/windDirectionTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="430dp"
+            android:layout_weight="1"
+            android:background="@drawable/background2"
+            android:text="@string/wind_direction"
+            android:textAlignment="center"
+            android:textColor="@color/GoldenYellow"
+            android:textSize="25sp" />
+
+    </LinearLayout>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/maps"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@id/ok"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+
+
+
+</RelativeLayout>
